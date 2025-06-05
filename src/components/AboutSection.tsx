@@ -16,7 +16,8 @@ const AboutSection = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          {/* Left Side */}
+          <div className="space-y-6 text-center md:text-left">
             <p className="text-lg text-muted-foreground leading-relaxed">
               I'm a passionate creative developer with 5+ years of experience
               crafting digital experiences that blend aesthetic beauty with
@@ -29,8 +30,9 @@ const AboutSection = () => {
               trends, experimenting with new technologies, or enjoying a
               perfectly brewed coffee while listening to ambient music.
             </p>
+
             <p>
-              My Resume →{""}
+              My Resume →
               <a
                 href="https://drive.google.com/file/d/1PzLFcj1RuM6jjm9mWoe8Kdq4TjOwTi0g/view"
                 target="_blank"
@@ -42,14 +44,15 @@ const AboutSection = () => {
               </a>
             </p>
 
-            <div className="grid grid-cols-2 gap-4 mt-8">
+            {/* Interests */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 justify-center">
               {interests.map((interest) => (
                 <div
                   key={interest.label}
-                  className="glass-card p-4 rounded-lg hover:scale-105 transition-transform duration-300 group"
+                  className="glass-card p-4 rounded-lg hover:scale-105 transition-transform duration-300 group text-center"
                 >
                   <interest.icon
-                    className={`${interest.color} mb-2 group-hover:animate-pulse`}
+                    className={`${interest.color} mb-2 group-hover:animate-pulse mx-auto`}
                     size={24}
                   />
                   <p className="text-sm font-medium">{interest.label}</p>
@@ -58,8 +61,9 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="w-80 h-80 mx-auto rounded-full glass-card p-2 animate-float">
+          {/* Right Side */}
+          <div className="relative mx-auto">
+            <div className="w-60 sm:w-72 md:w-80 h-60 sm:h-72 md:h-80 mx-auto rounded-full glass-card p-2 animate-float">
               <img
                 src="profile-git.png"
                 alt="Profile"
