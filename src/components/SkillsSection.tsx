@@ -29,8 +29,8 @@ const SkillsSection = () => {
         { name: "GraphQL", level: 80 },
       ],
     },
-    design: {
-      title: "Ai",
+    ai: {
+      title: "AI",
       color: "neon-green",
       skills: [
         { name: "Scikit-learn", level: 90 },
@@ -40,11 +40,23 @@ const SkillsSection = () => {
         { name: "NumPy", level: 90 },
         { name: "OpenCV", level: 75 },
         { name: "Flask", level: 80 },
-        
-    
       ],
     },
   };
+
+  const colorClassMap = {
+    "neon-cyan": "bg-cyan-400 text-black",
+    "neon-purple": "bg-purple-500 text-black",
+    "neon-green": "bg-green-400 text-black",
+  };
+
+  const gradientColorMap = {
+    "neon-cyan": "from-cyan-400 to-cyan-200",
+    "neon-purple": "from-purple-500 to-purple-300",
+    "neon-green": "from-green-400 to-green-200",
+  };
+
+  const activeColor = skillCategories[activeCategory].color;
 
   return (
     <section id="skills" className="py-20 px-6">
@@ -61,8 +73,8 @@ const SkillsSection = () => {
                 onClick={() => setActiveCategory(key)}
                 className={`px-6 py-3 rounded-lg transition-all duration-300 font-medium ${
                   activeCategory === key
-                    ? `bg-${category.color} text-black`
-                    : "text-muted-foreground hover:text-foreground"
+                    ? colorClassMap[category.color]
+                    : "text-muted-foreground hover:text-white"
                 }`}
               >
                 {category.title}
@@ -73,42 +85,22 @@ const SkillsSection = () => {
 
         <div className="glass-card rounded-xl p-8">
           <h3 className="text-2xl font-bold mb-8 text-center">
-            <span
-              className={`text-${
-                skillCategories[activeCategory as keyof typeof skillCategories]
-                  .color
-              }`}
-            >
-              {
-                skillCategories[activeCategory as keyof typeof skillCategories]
-                  .title
-              }
-            </span>{" "}
+            <span className={`text-${activeColor}`}>{skillCategories[activeCategory].title}</span>{" "}
             Development
           </h3>
 
           <div className="grid md:grid-cols-2 gap-6">
-            {skillCategories[
-              activeCategory as keyof typeof skillCategories
-            ].skills.map((skill, index) => (
+            {skillCategories[activeCategory].skills.map((skill, index) => (
               <div key={skill.name} className="space-y-2">
                 <div className="flex justify-between items-center">
                   <span className="font-medium">{skill.name}</span>
-                  <span className="text-sm text-muted-foreground">
-                    {skill.level}%
-                  </span>
+                  <span className="text-sm text-muted-foreground">{skill.level}%</span>
                 </div>
                 <div className="w-full bg-white/10 rounded-full h-2">
                   <div
-                    className={`h-2 rounded-full bg-gradient-to-r from-${
-                      skillCategories[
-                        activeCategory as keyof typeof skillCategories
-                      ].color
-                    } to-${
-                      skillCategories[
-                        activeCategory as keyof typeof skillCategories
-                      ].color
-                    }/50 transition-all duration-1000 ease-out`}
+                    className={`h-2 rounded-full bg-gradient-to-r ${
+                      gradientColorMap[activeColor]
+                    } transition-all duration-1000 ease-out`}
                     style={{
                       width: `${skill.level}%`,
                       animationDelay: `${index * 100}ms`,
