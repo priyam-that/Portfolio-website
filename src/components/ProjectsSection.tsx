@@ -11,7 +11,7 @@ const ProjectsSection = () => {
       tech: ["Python", "Flask", "Scikit-learn", "Pandas"],
       github:
         "https://github.com/priyam-that/FInal-Year-Project-Movie-Recommender.git",
-      live: "#",
+      live: "https://mannaportfolio.netlify.app/",
       gradient: "from-neon-cyan to-neon-purple",
     },
     {

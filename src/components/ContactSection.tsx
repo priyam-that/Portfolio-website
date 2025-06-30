@@ -1,11 +1,5 @@
 import { useState } from "react";
-import {
-  Send,
-  Mail,
-  TwitterIcon,
-  Linkedin,
-  Github,
-} from "lucide-react";
+import { Send, Mail, TwitterIcon, Linkedin, Github } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -65,7 +59,7 @@ const ContactSection = () => {
   const socialLinks = [
     {
       platform: "Email",
-      href: "mailto:mannapriyam136@gmail.com",
+      href: "mailto:priyammannaworks@gmail.com",
       icon: Mail,
       color: "hover:text-neon-cyan",
       target: "_blank",
@@ -74,7 +68,7 @@ const ContactSection = () => {
     },
     {
       platform: "LinkedIn",
-      href: "https://www.linkedin.com/in/priyam-manna-33a026226/",
+      href: "https://www.linkedin.com/in/priyam-manna/",
       icon: Linkedin,
       color: "hover:text-neon-purple",
       target: "_blank",
@@ -151,7 +145,8 @@ const ContactSection = () => {
               <input
                 type="text"
                 name="_honey"
-                style={{ display: "none" }}
+                hidden
+                aria-hidden="true"
                 tabIndex={-1}
                 autoComplete="off"
               />

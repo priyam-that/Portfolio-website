@@ -85,7 +85,9 @@ const SkillsSection = () => {
 
         <div className="glass-card rounded-xl p-8">
           <h3 className="text-2xl font-bold mb-8 text-center">
-            <span className={`text-${activeColor}`}>{skillCategories[activeCategory].title}</span>{" "}
+            <span className={`text-${activeColor}`}>
+              {skillCategories[activeCategory].title}
+            </span>{" "}
             Development
           </h3>
 
@@ -94,13 +96,13 @@ const SkillsSection = () => {
               <div key={skill.name} className="space-y-2">
                 <div className="flex justify-between items-center">
                   <span className="font-medium">{skill.name}</span>
-                  <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                  <span className="text-sm text-muted-foreground">
+                    {skill.level}%
+                  </span>
                 </div>
                 <div className="w-full bg-white/10 rounded-full h-2">
                   <div
-                    className={`h-2 rounded-full bg-gradient-to-r ${
-                      gradientColorMap[activeColor]
-                    } transition-all duration-1000 ease-out`}
+                    className={`h-2 rounded-full bg-gradient-to-r ${gradientColorMap[activeColor]} transition-all duration-1000 ease-out`}
                     style={{
                       width: `${skill.level}%`,
                       animationDelay: `${index * 100}ms`,

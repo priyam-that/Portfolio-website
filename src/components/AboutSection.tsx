@@ -19,10 +19,14 @@ const AboutSection = () => {
           {/* Left Side */}
           <div className="space-y-6 text-center md:text-left">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a passionate creative developer with 5+ years of experience
-              crafting digital experiences that blend aesthetic beauty with
-              functional excellence. My journey spans from pixel-perfect UI
-              design to complex backend architectures.
+              I’m a final-year B.Tech student in Computer Science and
+              Engineering with a strong foundation in full-stack web development
+              and a growing interest in machine learning and DevOps practices.
+              My core strength lies in using Python (Flask) for backend
+              development and React.js for crafting responsive and dynamic
+              frontends. I am skilled in building robust web applications with
+              modern tools and frameworks, ensuring clean code and optimized
+              performance.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
