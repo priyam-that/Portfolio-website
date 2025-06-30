@@ -3,6 +3,7 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectsSection = () => {
   const projects = [
     {
+      
       title: "Content Based Movie Recommendation System",
       description:
         "AI-driven movie recommendation system using content-based filtering and collaborative filtering techniques.",
@@ -11,7 +12,7 @@ const ProjectsSection = () => {
       tech: ["Python", "Flask", "Scikit-learn", "Pandas"],
       github:
         "https://github.com/priyam-that/FInal-Year-Project-Movie-Recommender.git",
-      live: "https://mannaportfolio.netlify.app/",
+      live:"https://movierecomsite.netlify.app/",
       gradient: "from-neon-cyan to-neon-purple",
     },
     {

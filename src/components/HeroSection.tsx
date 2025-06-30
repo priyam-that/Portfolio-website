@@ -4,7 +4,6 @@ import { ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
