@@ -36,7 +36,6 @@ const AboutSection = () => {
             </p>
 
             <p>
-              My Resume →
               <a
                 href="https://drive.google.com/file/d/1PzLFcj1RuM6jjm9mWoe8Kdq4TjOwTi0g/view"
                 target="_blank"
@@ -44,7 +43,7 @@ const AboutSection = () => {
                 className="inline-block ml-2 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition-all duration-300"
                 title="View Resume"
               >
-                Click here
+                Click For Resume
               </a>
             </p>
 

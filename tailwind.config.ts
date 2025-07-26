@@ -19,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['IBM Plex Mono', 'Fira Code', 'monospace'],
+				mono: ['IBM Plex Mono', 'Fira Code', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

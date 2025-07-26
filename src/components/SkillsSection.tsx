@@ -1,45 +1,64 @@
-import { useState } from "react";
-
 const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState("frontend");
-
   const skillCategories = {
     frontend: {
       title: "Frontend",
       color: "neon-cyan",
       skills: [
-        { name: "React", level: 95 },
-        { name: "Next.js", level: 90 },
-        { name: "JavaScript", level: 95 },
-        { name: "TypeScript", level: 85 },
-        { name: "HTML5", level: 100 },
-        { name: "CSS3", level: 95 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Framer Motion", level: 88 },
+        { name: "React.js", icon: "react" },
+        { name: "Next.js", icon: "nextjs" },
+        { name: "JavaScript", icon: "js" },
+        { name: "TypeScript", icon: "ts" },
+        { name: "HTML5", icon: "html" },
+        { name: "CSS3", icon: "css" },
+        { name: "Tailwind CSS", icon: "tailwind" },
+        { name: "Framer Motion", icon: "react" },
+        { name: "RESTful APIs", icon: "postman" },
+        { name: "WebSockets", icon: "nodejs" },
       ],
     },
     backend: {
       title: "Backend",
       color: "neon-purple",
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 88 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "Flask", level: 78 },
-        { name: "GraphQL", level: 80 },
+        { name: "Python", icon: "py" },
+        { name: "Node.js", icon: "nodejs" },
+        { name: "Express.js", icon: "express" },
+        { name: "Flask", icon: "flask" },
+        { name: "FastAPI", icon: "fastapi" },
+        { name: "Django", icon: "django" },
+        { name: "PostgreSQL", icon: "postgresql" },
+        { name: "MySQL", icon: "mysql" },
+        { name: "MongoDB", icon: "mongodb" },
+        { name: "Redis", icon: "redis" },
+        { name: "GraphQL", icon: "graphql" },
+        { name: "SQLAlchemy", icon: "py" },
+        { name: "JWT", icon: "nodejs" },
+        { name: "OAuth2", icon: "nodejs" },
+        { name: "HTTPS", icon: "nodejs" },
+        { name: "Session Management", icon: "nodejs" },
+        { name: "PyTest", icon: "py" },
+        { name: "SQL", icon: "mysql" },
       ],
     },
-    ai: {
-      title: "AI",
+    tools: {
+      title: "Tools & DevOps",
       color: "neon-green",
       skills: [
-        { name: "Scikit-learn", level: 90 },
-        { name: "Natural Language Processing", level: 75 },
-        { name: "Reinforcement Learning", level: 70 },
-        { name: "Pandas", level: 88 },
-        { name: "NumPy", level: 90 },
-        { name: "OpenCV", level: 75 },
-        { name: "Flask", level: 80 },
+        { name: "Linux", icon: "linux" },
+        { name: "Git", icon: "git" },
+        { name: "GitHub", icon: "github" },
+        { name: "Docker", icon: "docker" },
+        { name: "AWS", icon: "aws" },
+        { name: "GCP", icon: "gcp" },
+        { name: "CI/CD", icon: "github" },
+        { name: "Postman", icon: "postman" },
+        { name: "Jira", icon: "nodejs" },
+        { name: "Scikit-learn", icon: "sklearn" },
+        { name: "Pandas", icon: "py" },
+        { name: "NumPy", icon: "py" },
+        { name: "OpenCV", icon: "opencv" },
+        { name: "Natural Language Processing", icon: "py" },
+        { name: "Reinforcement Learning", icon: "py" },
       ],
     },
   };
@@ -50,14 +69,6 @@ const SkillsSection = () => {
     "neon-green": "bg-green-400 text-black",
   };
 
-  const gradientColorMap = {
-    "neon-cyan": "from-cyan-400 to-cyan-200",
-    "neon-purple": "from-purple-500 to-purple-300",
-    "neon-green": "from-green-400 to-green-200",
-  };
-
-  const activeColor = skillCategories[activeCategory].color;
-
   return (
     <section id="skills" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
@@ -65,53 +76,36 @@ const SkillsSection = () => {
           Skills & Expertise
         </h2>
 
-        <div className="flex justify-center mb-12">
-          <div className="glass-card rounded-lg p-2 flex gap-2">
-            {Object.entries(skillCategories).map(([key, category]) => (
-              <button
-                key={key}
-                onClick={() => setActiveCategory(key)}
-                className={`px-6 py-3 rounded-lg transition-all duration-300 font-medium ${
-                  activeCategory === key
-                    ? colorClassMap[category.color]
-                    : "text-muted-foreground hover:text-white"
-                }`}
-              >
-                {category.title}
-              </button>
-            ))}
-          </div>
-        </div>
+        <div className="space-y-12">
+          {Object.entries(skillCategories).map(([key, category]) => (
+            <div key={key} className="glass-card rounded-xl p-8">
+              <h3 className="text-2xl font-bold mb-8 text-center">
+                <span className={`text-${category.color}`}>
+                  {category.title}
+                </span>{" "}
+                Development
+              </h3>
 
-        <div className="glass-card rounded-xl p-8">
-          <h3 className="text-2xl font-bold mb-8 text-center">
-            <span className={`text-${activeColor}`}>
-              {skillCategories[activeCategory].title}
-            </span>{" "}
-            Development
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {skillCategories[activeCategory].skills.map((skill, index) => (
-              <div key={skill.name} className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="font-medium">{skill.name}</span>
-                  <span className="text-sm text-muted-foreground">
-                    {skill.level}%
-                  </span>
-                </div>
-                <div className="w-full bg-white/10 rounded-full h-2">
+              <div className="flex flex-wrap gap-3 justify-center">
+                {category.skills.map((skill, index) => (
                   <div
-                    className={`h-2 rounded-full bg-gradient-to-r ${gradientColorMap[activeColor]} transition-all duration-1000 ease-out`}
+                    key={skill.name}
+                    className={`px-3 py-2 rounded-lg ${colorClassMap[category.color]} font-medium text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center gap-2`}
                     style={{
-                      width: `${skill.level}%`,
                       animationDelay: `${index * 100}ms`,
                     }}
-                  ></div>
-                </div>
+                  >
+                    <img 
+                      src={`https://skillicons.dev/icons?i=${skill.icon}`} 
+                      alt={skill.name}
+                      className="w-5 h-5"
+                    />
+                    {skill.name}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
