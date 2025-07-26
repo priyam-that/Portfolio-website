@@ -1,4 +1,4 @@
-import { Code, Palette, Coffee, Music } from "lucide-react";
+import { Code, Palette, Coffee, Music, BookOpen, Heart } from "lucide-react";
 
 const AboutSection = () => {
   const interests = [
@@ -6,6 +6,13 @@ const AboutSection = () => {
     { icon: Palette, label: "Design", color: "text-neon-purple" },
     { icon: Coffee, label: "Coffee", color: "text-neon-green" },
     { icon: Music, label: "Music", color: "text-neon-pink" },
+  ];
+
+  const funFacts = [
+    { icon: "🎵", text: "Codes to lo-fi beats" },
+    { icon: "📚", text: "Always learning new tech" },
+    { icon: "🌱", text: "Open source contributor" },
+    { icon: "☕", text: "Fueled by coffee & curiosity" },
   ];
 
   return (
@@ -61,6 +68,22 @@ const AboutSection = () => {
                   <p className="text-sm font-medium">{interest.label}</p>
                 </div>
               ))}
+            </div>
+
+            {/* Fun Facts */}
+            <div className="mt-8 space-y-3">
+              <h3 className="text-lg font-semibold text-gradient mb-4">Fun Facts About Me</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {funFacts.map((fact, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 glass-card p-3 rounded-lg hover:scale-105 transition-all duration-300"
+                  >
+                    <span className="text-xl">{fact.icon}</span>
+                    <span className="text-sm text-muted-foreground">{fact.text}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
