@@ -44,7 +44,7 @@ const AboutSection = () => {
 
             <p>
               <a
-                href="https://drive.google.com/file/d/1PzLFcj1RuM6jjm9mWoe8Kdq4TjOwTi0g/view"
+                href="https://drive.google.com/file/d/1ArqzS8d4acX_hNq-O_qq6ZVbS1vvF5DW/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block ml-2 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition-all duration-300"
