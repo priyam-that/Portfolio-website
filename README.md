@@ -1,77 +1,112 @@
-<!--
-    ## Table of Contents
+# Priyam Manna – Portfolio Website
 
-    - [About the Project](#about-the-project)
-    - [Features](#features)
-    - [Getting Started](#getting-started)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Contributing](#contributing)
-    - [License](#license)
-    - [Contact](#contact)
+Showcasing my work as a Machine Learning Engineer & Developer. Built with React, TypeScript, Vite, Tailwind CSS, and shadcn/ui. This site features a modern, responsive design, project highlights, and a contact form.
 
-    ## About the Project
+---
 
-    This Portfolio Website is a personal project designed to showcase your skills, projects, and experience. Built with React, it offers a modern and responsive design, making it easy for visitors to learn more about you.
+## Table of Contents
 
-    ## Features
+- [About](#about)
+- [Features](#features)
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-    - Responsive design for all devices
-    - Easy customization of content and styles
-    - Project showcase section
-    - Contact form integration
-    - Smooth navigation and animations
+---
 
-    ## Getting Started
+## About
 
-    To get a local copy up and running, follow these simple steps.
+This is my personal portfolio website to showcase my skills, projects, and experience. It is built with modern web technologies and is fully responsive.
 
-    ### Prerequisites
+## Features
 
-    - Node.js (v14 or higher)
-    - npm or yarn
+- Responsive design for all devices
+- Modern UI with [shadcn/ui](https://ui.shadcn.com/) and Tailwind CSS
+- Animated hero section and smooth navigation
+- Project showcase with live demos and code links
+- Contact form (Formspree integration)
+- Social links (GitHub, LinkedIn, Twitter, Email)
 
-    ### Installation
+## Demo
 
-    1. Clone the repository:
-        ```bash
-        git clone https://github.com/your-username/portfolio-website.git
-        ```
-    2. Navigate to the project directory:
-        ```bash
-        cd portfolio-website
-        ```
-    3. Install dependencies:
-        ```bash
-        npm install
-        ```
-        or
-        ```bash
-        yarn install
-        ```
+Live: [https://yourdomain.com](https://yourdomain.com) <!-- Replace with your actual domain -->
 
-    ## Usage
+## Getting Started
 
-    Start the development server:
+### Prerequisites
 
-    ```bash
-    npm start
-    ```
-    or
-    ```bash
-    yarn start
-    ```
+- Node.js (v18 or higher recommended)
+- npm (v9+) or yarn
 
-    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
 
-    ## Contributing
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/priyam-that/Portfolio-website.git
+   cd Portfolio-website
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-    Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+## Usage
 
-    ## License
+### Development
 
-    Distributed under the MIT License. See `LICENSE` for more information.
+Start the local development server:
 
-    ## Contact
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-    For questions or feedback, please contact [your-email@example.com](mailto:your-email@example.com).
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build
+
+To build for production:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+# or
+yarn preview
+```
+
+## Project Structure
+
+- `src/components/` – UI sections (Hero, Projects, About, Contact, etc.)
+- `src/pages/` – Page components
+- `src/hooks/` – Custom React hooks
+- `src/lib/` – Utility functions
+- `public/` – Static assets (images, favicon, etc.)
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
+
+## License
+
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
+
+## Contact
+
+- Email: [priyammannaworks@gmail.com](mailto:priyammannaworks@gmail.com)
+- LinkedIn: [Priyam Manna](https://www.linkedin.com/in/priyam-manna/)
+- Twitter: [@MannaCodes](https://x.com/MannaCodes)
+- GitHub: [priyam-that](https://github.com/priyam-that)
