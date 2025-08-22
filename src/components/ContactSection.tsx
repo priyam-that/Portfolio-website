@@ -68,7 +68,7 @@ const ContactSection = () => {
     },
     {
       platform: "LinkedIn",
-      href: "https://www.linkedin.com/in/priyam-manna/",
+      href: "https://www.linkedin.com/in/priyammanna/",
       icon: Linkedin,
       color: "hover:text-neon-purple",
       target: "_blank",
